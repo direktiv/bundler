@@ -42,9 +42,9 @@ bundler inspect /path/to/kernel-99.99.1
 Create a "live" bundle for the tags provided. If run with argument "dry-run" it only shows the files being on the bundle with those tags applied.
 
 ```sh
-process /path/to/kernel-99.99.1 tcpdump --dry-run
+bundler process /path/to/kernel-99.99.1 tcpdump --dry-run
 
-process /path/to/kernel-99.99.1 tcpdump > file
+bundler process /path/to/kernel-99.99.1 tcpdump > file
 ```
 
 #### More Information:
