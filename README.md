@@ -6,14 +6,14 @@
     <img src="assets/vlogo.png" alt="Logo" width="80" height="80">
   </a>
   <h3 align="center">bundler</h3>
-  <h5 align="center">tool to create,modify bundles for vorteil.io</h5>
+  <h5 align="center">tool to create or modify bundles for vorteil.io</h5>
 </p>
 
 <hr/>
 
-This tool helps to build, modify, extract or inspect [vorteil](https://github.com/vorteil/vorteil) bundles. It contains only four commands:
+The bundler tool helps to build, modify, extract or inspect [vorteil](https://github.com/vorteil/vorteil) bundles. It contains only four commands:
 
-##### create
+### create
 
 Creates a vorteil.io bundle based on the files in the provided toml configuration file.
 
@@ -21,7 +21,7 @@ Creates a vorteil.io bundle based on the files in the provided toml configuratio
 bundler create 11.22.3 /path/to/bundle.toml > vorteil-11.22.3
 ```
 
-##### extract
+### extract
 
 Extracts all files from an existing bundle to the provided folder.
 
@@ -29,7 +29,7 @@ Extracts all files from an existing bundle to the provided folder.
 bundler extract /path/to/kernel-99.99.1 /tmp/folder
 ```
 
-##### inspect
+### inspect
 
 Inspects the bundle and returns all file names and tags in this bundle.
 
@@ -37,23 +37,22 @@ Inspects the bundle and returns all file names and tags in this bundle.
 bundler inspect /path/to/kernel-99.99.1
 ```
 
-##### process
+### process
 
 Create a "live" bundle for the tags provided. If run with argument "dry-run" it only shows the files being on the bundle with those tags applied.
 
 ```sh
 bundler process /path/to/kernel-99.99.1 tcpdump --dry-run
-
 bundler process /path/to/kernel-99.99.1 tcpdump > file
 ```
 
-#### More Information:
+## More Information:
 
 * [vorteil.io tools](https://github.com/vorteil/vorteil) - Build vorteil.io micro virtual machines
 * [vbundler](https://github.com/vorteil/vbundler) - What are bundles?
 * [docs](https://docs.vorteil.io/)
 
-#### Building
+## Building
 
 ```sh
 go build -o bundler cmd/main.go
